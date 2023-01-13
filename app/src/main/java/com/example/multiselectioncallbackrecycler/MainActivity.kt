@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         val recView = this.findViewById<RecyclerView>(R.id.recView)
         recView.layoutManager = FlexboxLayoutManager(this)
 
+        //............Defining Lambda Function...............
         recView.adapter = Adapter(populateData()) {
             if (selectedItems.contains(it)) {
                 selectedItems.remove(it)
